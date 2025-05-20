@@ -1,0 +1,808 @@
+/* Reset default styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body layout */
+body, html {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Top navigation bar with maroon color */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  flex-wrap: wrap;
+  background-image: linear-gradient(rgba(128, 0, 0, 0.85), rgba(128, 0, 0, 0.85)), url('images/programmer.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Logo styling */
+.logo img {
+  height: 60px;
+  max-width: 100%;
+  object-fit: contain;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+/* Navigation links */
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect: underline with animation */
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #ffcccc; /* Light pink underline */
+  left: 0;
+  bottom: -2px;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffcccc; /* Light contrast hover */
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Main content area */
+.content {
+  flex: 1;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+/* Footer */
+.footer {
+  background-color: #800000;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 10px;
+    flex-wrap: wrap;
+  }
+
+  .logo img {
+    height: 50px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* Intro Section Styling */
+.intro-section {
+  background: linear-gradient(rgba(128, 0, 0, 0.8), rgba(128, 0, 0, 0.8)), url('banner-background.jpg') center/cover no-repeat;
+  text-align: center;
+  padding: 80px 20px;
+  color: #ffffff;
+}
+
+.intro-section h1 {
+  font-size: 2.8em;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.intro-section p {
+  font-size: 1.2em;
+  max-width: 800px;
+  margin: 0 auto 35px auto;
+  line-height: 1.7;
+}
+
+/* Navigation Buttons */
+.nav-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
+}
+
+.nav-buttons a {
+  text-decoration: none;
+  padding: 12px 24px;
+  background-color: #b3003b;
+  color: white;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.nav-buttons a:hover {
+  background-color: #e6005c;
+  transform: translateY(-2px);
+}
+
+.nav-buttons .donate {
+  background-color: #ff0033;
+}
+
+.nav-buttons .donate:hover {
+  background-color: #ff4d6d;
+}
+
+/* Features Section */
+.features-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+}
+
+.feature-card {
+  width: 260px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Image container with overlay */
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Overlay on hover */
+.overlay-text {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 0;
+  background: rgba(128, 0, 0, 0.6); /* Maroonish transparent */
+  color: #fff;
+  font-size: 0.9em;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.image-container:hover .overlay-text {
+  opacity: 1;
+}
+
+/* Feature heading */
+.feature-card h3 {
+  padding: 15px 10px 0 10px;
+  color: #800000;
+  font-size: 1.2em;
+}
+
+/* Description text (initially hidden) */
+.feature-card .description {
+  padding: 10px 15px 20px 15px;
+  display: none;
+  color: #444;
+  font-size: 0.95em;
+  line-height: 1.5;
+}
+
+
+
+
+
+
+
+
+
+.about-section {
+  padding: 60px 20px;
+  background-color: #fdfdfd;
+}
+
+.about-wrapper {
+  max-width: 1000px;
+  margin: auto;
+  color: #333;
+  line-height: 1.8;
+}
+
+.about-wrapper h1 {
+  font-size: 2.4em;
+  color: #800000;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.about-wrapper h2 {
+  font-size: 1.6em;
+  margin-top: 40px;
+  color: #5a0000;
+}
+
+.about-wrapper p {
+  font-size: 1.1em;
+  margin: 15px 0;
+  text-align: justify;
+}
+
+.info-list {
+  margin: 20px 0;
+  padding-left: 20px;
+}
+
+.info-list li {
+  margin-bottom: 10px;
+  font-size: 1.05em;
+  list-style: disc;
+}
+
+
+
+
+
+
+
+
+
+
+.activities-section {
+  padding: 60px 20px;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+.activities-wrapper {
+  max-width: 1000px;
+  margin: auto;
+  line-height: 1.8;
+}
+
+.activities-wrapper h1 {
+  font-size: 2.2em;
+  color: #800000;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.activity {
+  margin-bottom: 40px;
+}
+
+.activity h2 {
+  color: #5a0000;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.activity p {
+  font-size: 1.05em;
+  text-align: justify;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Link that toggles dropdown */
+.dropbtn {
+  text-decoration: none;
+  color: white;
+  padding: 14px 16px;
+  display: inline-block;
+}
+
+/* Dropdown menu itself */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%; /* ensures it drops directly below the button */
+  left: 0;
+  background-color: #800000;
+  min-width: 180px;
+  z-index: 1;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  overflow: hidden;
+  transition: opacity 0.3s ease;
+}
+
+/* Items in dropdown */
+.dropdown-content a {
+  color: #fff;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+}
+
+.dropdown-content a:hover {
+  background-color: #a00000;
+}
+
+/* Show dropdown on hover (desktop) */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+
+
+
+
+
+
+
+/* Portfolio Summary */
+.portfolio-main {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.portfolio-main h1 {
+  font-size: 2.5rem;
+  color: #800000;
+  margin-bottom: 10px;
+}
+
+.portfolio-main p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.portfolio-summary {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.summary-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 300px;
+  padding: 25px;
+  text-align: left;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.summary-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.summary-card h2 {
+  color: #800000;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.summary-card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+
+
+
+
+
+
+/* Projects Page */
+.projects-hero {
+  text-align: center;
+  padding: 60px 20px 30px;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+.projects-hero h1 {
+  font-size: 2.8rem;
+  color: #800000;
+  margin-bottom: 10px;
+}
+
+.projects-hero p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 20px;
+  background-color: #fff;
+}
+
+.project-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  width: 300px;
+  padding: 25px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.project-icon {
+  font-size: 2.5rem;
+  color: #800000;
+  margin-bottom: 15px;
+}
+
+.project-card h2 {
+  font-size: 1.4rem;
+  color: #800000;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.gallery-section {
+  text-align: center;
+  padding: 40px 20px;
+  background: #f9f9f9;
+}
+
+.gallery-section h1 {
+  font-size: 2.5rem;
+  color: #800000;
+  margin-bottom: 30px;
+}
+
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.gallery-item {
+  position: relative;
+  width: 280px;
+  height: 200px;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.03);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  padding: 8px;
+  font-size: 0.95rem;
+}
+
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 99;
+  padding-top: 80px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.85);
+}
+
+.modal-content {
+  display: block;
+  margin: auto;
+  max-width: 80%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(255,255,255,0.2);
+}
+
+.close {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal-caption {
+  text-align: center;
+  color: #fff;
+  margin-top: 15px;
+  font-size: 1.1rem;
+}
+
+.modal-caption h2 {
+  margin: 10px 0 5px;
+}
+
+
+
+
+
+
+
+
+.enquiry-form {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #f8f8f8;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  resize:none;
+}
+
+button[type="submit"] {
+  background-color: #800000;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+button[type="submit"]:hover {
+  background-color: #a00000;
+}
+
+@media (max-width: 600px) {
+  .enquiry-form {
+    padding: 15px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Donate Page - donate.html */
+
+/* Page Layout */
+main.content {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+/* Headings */
+main h1, main h2, main h3 {
+  color: #004080;
+  margin-bottom: 15px;
+}
+
+main p {
+  margin-bottom: 20px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Donate Button */
+.donate-button {
+  display: inline-block;
+  background-color: #e67e22;
+  color: #fff;
+  padding: 12px 24px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.donate-button:hover {
+  background-color: #cf711f;
+}
+
+/* Partnership Form */
+.partnership-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.partnership-form input,
+.partnership-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.partnership-form button {
+  background-color: #004080;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.partnership-form button:hover {
+  background-color: #003366;
+}
+
+/* Section Spacing */
+.donation-intro,
+.get-involved,
+.partnerships {
+  margin-bottom: 40px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  main.content {
+    padding: 15px;
+  }
+
+  .donate-button,
+  .partnership-form button {
+    width: 100%;
+    text-align: center;
+  }
+}

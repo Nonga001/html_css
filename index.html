@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   <!-- Inside your <body> tag -->
+
+<header class="navbar">
+  <div class="logo">
+    <img src="images/camaraedu.png" alt="Logo">
+  </div>
+  <nav class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="activities.html">Activities</a>
+
+    <div class="dropdown">
+      <a href="portfolio.html" class="dropbtn">Portfolio</a>
+      <div class="dropdown-content">
+        <a href="projects.html">Projects</a>
+        <a href="gallery.html">Gallery</a>
+      </div>
+    </div>
+
+    <a href="contact.html">Contact</a>
+    <a href="donate.html">Donate</a>
+  </nav>
+</header>
+
+
+  <!-- Hero / Intro Section -->
+<div class="intro-section">
+  <h1>Empowering Education Through Technology</h1>
+  <p>
+    Camara Education is on a mission to bridge the digital divide by providing technology, training, and support to schools in under-resourced communities. Together, we’re creating a future where every child has access to quality digital learning.
+  </p>
+  <div class="nav-buttons">
+    <a href="about.html">About</a>
+    <a href="activities.html">Activities</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="contact.html">Contact</a>
+    <a href="donate.html" class="donate">Donate</a>
+  </div>
+</div>
+
+<!-- Feature Section -->
+<div class="features-section">
+  <div class="feature-card" onclick="toggleDescription(this)">
+    <div class="image-container">
+      <img src="images/computers.jpeg" alt="Computer Access">
+      <div class="overlay-text">Click to view more info</div>
+    </div>
+    <h3>Computer Access</h3>
+    <p class="description">Supplying refurbished hardware and software to underserved schools.</p>
+  </div>
+
+  <div class="feature-card" onclick="toggleDescription(this)">
+    <div class="image-container">
+      <img src="images/training.jpeg" alt="Teacher Training">
+      <div class="overlay-text">Click to view more info</div>
+    </div>
+    <h3>Teacher Training</h3>
+    <p class="description">Equipping educators with the skills to integrate ICT into learning.</p>
+  </div>
+
+  <div class="feature-card" onclick="toggleDescription(this)">
+    <div class="image-container">
+      <img src="images/innovation.jpeg" alt="Innovation Support">
+      <div class="overlay-text">Click to view more info</div>
+    </div>
+    <h3>Innovation Support</h3>
+    <p class="description">Funding and coaching innovative educational projects across regions.</p>
+  </div>
+
+  <div class="feature-card" onclick="toggleDescription(this)">
+    <div class="image-container">
+      <img src="images/policy.jpeg" alt="Policy Engagement">
+      <div class="overlay-text">Click to view more info</div>
+    </div>
+    <h3>Policy Engagement</h3>
+    <p class="description">Partnering with governments to shape sustainable ICT education strategies.</p>
+  </div>
+</div>
+
+<!-- JavaScript to toggle description -->
+<script>
+  function toggleDescription(card) {
+    const description = card.querySelector('.description');
+    description.style.display = description.style.display === 'block' ? 'none' : 'block';
+  }
+</script>
+
+
+
+  <footer class="footer">
+    <p>&copy; 2025 My Website. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

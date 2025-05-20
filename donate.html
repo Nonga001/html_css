@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <img src="images/camaraedu.png" alt="Logo">
+    </div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="activities.html">Activities</a>
+  
+      <div class="dropdown">
+        <a href="portfolio.html" class="dropbtn">Portfolio</a>
+        <div class="dropdown-content">
+          <a href="projects.html">Projects</a>
+          <a href="gallery.html">Gallery</a>
+        </div>
+      </div>
+  
+      <a href="contact.html">Contact</a>
+      <a href="donate.html">Donate</a>
+    </nav>
+  </header>
+ 
+
+  <main class="content">
+    <section class="donation-intro">
+      <h1>Support Our Mission</h1>
+      <p>Join us in making a lasting impact through education, technology, and empowerment. Your support enables us to continue our projects, expand outreach, and create meaningful change.</p>
+    </section>
+
+    <section class="get-involved">
+      <h2>Get Involved / Donate</h2>
+      <p>You can support us by making a one-time or recurring donation. Every contribution makes a difference.</p>
+      
+      <!-- Example Donate Button (PayPal or Stripe Integration Placeholder) -->
+      <a href="https://www.paypal.com/donate" class="donate-button" target="_blank">Donate Now</a>
+
+      <h3>Prefer to do a direct bank transfer or sponsor a project?</h3>
+      <p><strong>Email us:</strong> <a href="mailto:partners@camaraedu.org">partners@camaraedu.org</a> to discuss tailored partnerships or large donations.</p>
+    </section>
+
+    <section class="partnerships">
+      <h2>Partnership Opportunities</h2>
+      <p>We welcome collaboration with institutions, NGOs, and corporate partners. Together we can achieve more.</p>
+
+      <form action="mailto:partners@camaraedu.org" method="POST" enctype="text/plain" class="partnership-form">
+        <label for="name">Organization / Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message / Proposal:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Send Inquiry</button>
+      </form>
+    </section>
+  </main>
+  <footer class="footer">
+    <p>&copy; 2025 My Website. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

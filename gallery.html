@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Camara - Gallery</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <img src="images/camaraedu.png" alt="Camara Logo" />
+    </div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="activities.html">Activities</a>
+      <div class="dropdown">
+        <a href="portfolio.html" class="dropbtn">Portfolio</a>
+        <div class="dropdown-content">
+          <a href="projects.html">Projects</a>
+          <a href="gallery.html">Gallery</a>
+        </div>
+      </div>
+      <a href="contact.html">Contact</a>
+      <a href="donate.html">Donate</a>
+    </nav>
+  </header>
+
+  <section class="gallery-section">
+    <h1>Gallery of Impact</h1>
+    <div class="gallery-grid">
+      <div class="gallery-item" onclick="openModal('Event 1', 'Digital Training in Nairobi', 'March 2024', 'images/event1.jpg')">
+        <img src="images/event1.jpeg" alt="Event 1">
+        <div class="overlay">Digital Training - March 2024</div>
+      </div>
+      <div class="gallery-item" onclick="openModal('Event 2', 'Laptop Handover in Kisumu', 'April 2024', 'images/event2.jpg')">
+        <img src="images/event2.jpeg" alt="Event 2">
+        <div class="overlay">Laptop Handover - April 2024</div>
+      </div>
+      <div class="gallery-item" onclick="openModal('Computer Lab', 'Equipped school lab in Eldoret', 'January 2024', 'images/lab1.jpg')">
+        <img src="images/lab1.jpeg" alt="Computer Lab">
+        <div class="overlay">School Lab - Jan 2024</div>
+      </div>
+      <div class="gallery-item" onclick="openModal('Teacher Training', 'Bootcamp for Educators in Nakuru', 'February 2024', 'images/teacher-training.jpg')">
+        <img src="images/teacher.jpeg" alt="Teacher Training">
+        <div class="overlay">Teacher Bootcamp - Feb 2024</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div id="imageModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img id="modalImage" class="modal-content" />
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2025 Camara Education. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function openModal(title, description, date, imgSrc) {
+      document.getElementById("imageModal").style.display = "block";
+      document.getElementById("modalImage").src = imgSrc;
+      document.getElementById("modalCaption").innerHTML =
+        `<h2>${title}</h2><p>${description}</p><p><strong>Date:</strong> ${date}</p>`;
+    }
+
+    function closeModal() {
+      document.getElementById("imageModal").style.display = "none";
+    }
+  </script>
+</body>
+</html>
